@@ -1,0 +1,60 @@
+@import 'var';
+@import 'regLoginHeaderFooter';
+@import 'indexHeaderFooter';
+.loginlist{
+    margin-top:80px;position:relative;height:420px;
+    float:left;width:344px;border: 1px solid #d0d0d0;padding:23px; box-sizing: border-box;    
+    .now a{display:block;font-size:12px;color:#FF7800;float:left;}
+    .now a:hover{color:#f34;}
+    .climg{
+        span{display:block;height:60px;width:60px;top:0;right:0;position:absolute;background-image:url('../img/reg/right-myCenter.png');cursor:pointer;}
+        .cl1{background-position: -75px -75px;}
+        .cl2{background-position: 0 -75px;display:none;}
+    }
+    .tog{display:none;
+       padding-top:25px;position:relative;
+        img{width:170px;height:170px;margin-left:63px;padding:0;display:block;}
+        span{display:block;position:absolute;left:50px;bottom:0px;background: url('../img/reg/right-myCenter.png') no-repeat -75px 0;height:34px;width:34px;}
+        p{font-size:12px;margin-left:100px;margin-top: 30px;}
+        p a{color:#f34;}
+        .sao{font-size:12px;margin-left:100px;}
+    }
+    form{display:block;padding-top: 20px;}
+    form .error{font-size:12px;color:#FF7800;margin-left:20px;}
+    form p{
+        margin-left: 28px;position:relative;
+        input{height:40px;line-height:40px;width:240px;border-radius:10px;font-size:12px;border: 1px solid #D0D0D0;background:$w;text-indent: 4em;}
+        .us,.ps{display:block;background: url('../img/reg/login-box.png') no-repeat 0 -90px;width:40px;height:40px;line-height:40px;position:absolute;top:0;left:0;}
+        .ps{background: url('../img/reg/login-box.png') no-repeat 0 -135px;}
+    }
+    .error{height:30px;line-height:30px;}
+    .pasrem{
+        padding-top: 45px;padding-left: 25px;padding-right: 20px;
+        label{color:#a7a7a7;font-size:12px;margin-left:10px;}
+        .rem,span{float:left;}
+        a{float:right;font-size:12px;color:#a7a7a7;}
+    }
+    button{margin-top:12px;width:240px;height:40px;background:#C81417;border:0 none;outline:none;border-radius:10px;line-height:40px;font-size:14px;font-weight:700;color:$w;margin-left:30px;cursor:pointer;}
+    button:hover{background:#9a0f12;}
+    .logp{text-align: center;font-size:12px;color:#a7a7a7;margin-top:25px;margin-left: -6px;} 
+    .logicon{
+        position:absolute;bottom:10px;
+        .icon1{
+            padding-top:13px;
+            float:left;width:85px;height:55px;margin-left:90px;
+            a{display:block;}
+            span{display:block;width:30px;height:30px;background-image:url('../img/reg/login-box.png');}
+            .QQ{background-position:0 -180px ;}
+            .wechat{background-position:0 -225px;}
+            p{font-size:12px;color:#a7a7a7;margin-left: -7px;margin-top:5px;}
+        }
+        .icon1:last-child{
+            margin-left:0;
+        }
+
+    }
+}
+.fixcenter{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:15px;background:rgba(0,0,0,0.6);color:$w;font-size:14px;
+
+}

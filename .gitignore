@@ -1,0 +1,2 @@
+#不把node_modules推送上去
+node_modules/

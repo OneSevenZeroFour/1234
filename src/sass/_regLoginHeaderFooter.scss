@@ -1,0 +1,24 @@
+//regginTop
+
+#regLoginTop{
+    width:1200px;margin:0 auto;
+    .logo a{display:block;float:left;margin-top:40px;margin-bottom: 15px;}
+    .icon{
+        ul{display:flex;justify-content:space-around;background:$w;padding:25px 0;float:right;}
+        li{float:left;width:240px;position:relative;margin-left:45px;}
+        li div:first-child{width:62px;height:62px;float:left;background-image:url('../img/index/foot-sprite.png');margin-right:20px;}
+        .icon1{background-position:-270px -105px;}
+        .icon3{background-position:-450px -105px;}
+        .icon4{background-position:-540px -105px;}
+        li span:first-child{color:$mainColor;font-size:$fs;line-height:40px;}
+        li span:last-child{font-size:12px;}
+        div span{display:block;}
+    }
+}
+
+#regmain{
+    width:1200px; margin:0 auto;
+    .regLoginimg{
+        float:left;display:block;margin-right:125px;
+    }
+}
