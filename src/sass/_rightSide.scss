@@ -1,0 +1,53 @@
+//右边侧边栏动画效果
+
+#right-guide{
+    .fix{position:fixed;top:0;right:0;top:60px;padding-top:1px;z-index:9999;}
+    .fixuls{
+        position:absolute;right:0;width:50px;top:2px;
+        .hovd{
+            cursor:pointer;
+            .cart-num{
+                width: 20px;height: 14px;display: block;position: absolute;top: 15px;left: 15px;background:url('../img/index/right-guide.png') no-repeat -360px 0;line-height:14px;    text-align: center;color: #fff;position: absolute;left:28px;top:5px;font-style: normal;font-size:12px;
+            }
+        }
+        .hovd li{
+            position:relative;border:1px solid #f0f0f0;background:$w;margin-bottom:4px;border-bottom-left-radius:10px;border-top-left-radius:10px;border:none;box-sizing:border-box;border-bottom:none;height:49px;
+            // padding-top:1px;
+        }
+        .hovd:first-child li{top:0px;}
+        .hovd .fixl{
+            height:51px;width:51px;background:$w;margin-bottom:1px;border-bottom-left-radius:10px;border-top-left-radius:10px;border-right:none;box-sizing:border-box;font-size:12px;display:block;position:absolute;right:0;border:1px solid #f0f0f0;margin-top:-1px;line-height:51px;padding-left:14px;overflow:hidden;
+        }
+        .gui{
+            height:40px;width:50px;position:relative;
+            a{display:block;width:20px;height:25px;text-align:center;line-height:20px;background:url('../img/index/right-guide.png') no-repeat;position:absolute;top:15px;right:14px;}
+            .guide1{background-position:0 0;}
+            .guide2{background-position:-45px 2px;}
+            .guide3{background-position:-90px 3px;}
+            .guide4{background-position:-135px 3px;}
+            .guide5{background-position:-175px 0;}
+            .guide6{background-position:-225px 2px;}
+            .guide7{background-position:-267px 4px;}
+        }
+        
+    }
+    .every{
+        width:329px;height:600px;background:$w;position:absolute;border:1px solid #f0f0f0;
+        .divclose{
+            height:50px;border-bottom: 1px solid #F0F0F0;line-height:50px;position:relative;
+            button{position:absolute;right:10px;top:8px;background:$w;border:0 none;color:#D0D0D0;    cursor: pointer;font-size:25px;}
+        }
+       
+        .indexLogin{position:relative;
+            .geren{display:none;
+                p{text-align:center;color: #C81417;margin-top:30px;}
+            }
+            .loginlist{
+                border:none;width:316px;
+                .climg{border:none;position:absolute;right:0;top:-70px;}
+            }
+            .touxiang{background:url(../img/reg/right-myCenter.png) no-repeat 0 0;cursor: pointer;    width: 62px;height: 62px;display:block;position:relative;left:50%;transform:translate(-50%,25%);}
+        }
+        
+    }
+}

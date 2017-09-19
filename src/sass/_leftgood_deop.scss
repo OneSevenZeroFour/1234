@@ -1,0 +1,21 @@
+#goodsdiv{
+    margin:0 auto;width:1200px;
+    .leftgood{
+        float:left;
+        .hot{
+            height: 40px;background: #fafafa;border-bottom: 1px solid #e6e6e6;position: relative;text-align: center;line-height: 40px;color: #c71417;font-weight: bold;font-size:14px;
+            span{color: #666;margin-left: 4px;font-size:12px;}
+        }
+        div{ width:188px;padding-bottom: 20px;border: 1px solid #e6e6e6;margin-bottom:15px;}
+        .leftul{
+            li{padding:25px;}
+            img{width:140px;}
+            p{height:20px;line-height:20px;margin-top:10px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-size:12px;}
+            p:hover{color:#f34;cursor:pointer;}
+        }
+    }
+    .rightgood{
+        float:right;width: 1000px;
+        .before{height: 40px;background: #f9f9f7;border: 1px solid #e6e6e6;}
+    }
+}

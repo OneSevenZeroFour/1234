@@ -1,0 +1,33 @@
+@import 'var';
+@import 'regLoginHeaderFooter';
+@import 'indexHeaderFooter';
+#regmain{
+    .formlist{
+        border:1px solid #d0d0d0;margin-top:30px;float:left;width:350px;
+        .fi{height:50px;line-height:50px;background:#f5f5f5;border-bottom: 1px solid #f0f0f0;}
+        .fi span{font-size:12px;padding-left:23px;color:#666;}
+        .fi a{color:#ff7800;font-size:12px;float:right;padding-right:16px;}
+        form{padding:22px 0;
+            p{
+                line-height:35px;margin-left:5px;float:left;width: 100%;position:relative;
+                
+            }
+            .tip1,.tip2,.tip3,.tip4{font-size:12px;position:absolute;bottom:0px;left:85px;display:block;font-style:normal;line-height:30px;}
+            p span{width:55px;line-height:35px;display:block;float:left;font-size:12px;color:#666;margin-left:27px;}
+            p input{
+               font-size:12px;margin-bottom: 30px;float:right;margin-right:40px;width:170px;background-color:#fcfcfc;color:#666;border-radius: 5px;border: 1px solid #e6e6e6;line-height: 35px;padding-left: 10px;padding-right: 45px;    height: 34px;
+            }
+            p img{right:35px;position: absolute;}
+            p .vcode{width:100px;float:left;}
+            .ranCode{right:35px;border:1px solid #e6e6e6;position: absolute;width:64px;height:25px;line-height:25px;top:5px;border-radius: 10px;text-align:center;cursor:pointer;}
+            button{background:$mainColor;width:265px;height:40px;text-align: center;line-height:40px;font-weight:700;color:$w;font-size:14px;outline:none;border:0 none;border-radius:10px;cursor:pointer;margin-left: 42px;margin-bottom:13px;}
+            button:hover{background:#e92629;}
+        }
+        .protocol{
+            float:right;
+            input{float:left;}
+            a{font-size:12px;float:left;color:#a7a7a7;}
+            a:hover{color:#f34;}
+        }
+    }
+}

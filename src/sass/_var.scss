@@ -1,0 +1,19 @@
+$mainColor:#C81417;
+$fontColor:#333333;
+$smallColor:#666666;
+$w:#fff;
+$hui:#999;
+$qita:#7E7E7E;
+$b:#000;
+$fs:16px;
+$bf:20px;
+$p3:30px;
+body,html,ul,div,p,h1,h2,h3,h4,h5,h6,dt,dd,dl,span{margin:0;padding:0;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+.clear::after{content:'';display:block;overflow:hidden;height:0;visibility:hidden;clear:both;zoom:1;}
+img{display:block;}
+.left{float:left;}
+.right{float:right;}
+input,button{outline:none;}
+.boxCenter{width:1200px;margin:0 auto;}
