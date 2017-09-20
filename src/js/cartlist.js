@@ -1,9 +1,10 @@
 require(['config'],function(){
-    require(['jquery','cookie'],function($){
+    require(['jquery','cookie','position'],function($){
         ;(function($){
       // console.log(123);
         $('#header').load('../index.html #header .headerTop');
         $('.cartfoot').load('../index.html #footer');
+        position();
         //头部hover效果
        require(['headerHover_module'],function(){
         //搜索框失焦
