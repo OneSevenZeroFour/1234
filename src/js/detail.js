@@ -1,10 +1,11 @@
 require(['config'],function(){
-    require(['jquery','cookie'],function($){
+    require(['jquery','cookie','position'],function($){
         ;(function($){
            $('#de-header').load('../index.html #header');
            $('#de-footer').load('../index.html #footer');
            $('#de-right-guide').load('../index.html #right-guide');
            $('#goodsdiv .de-leftgood').load('../html/oplist.html .leftgood');
+           position();
            require(['headerHover_module']);
            var id = Cookie.get('goodsid');
            // console.log(id);
