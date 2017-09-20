@@ -51,6 +51,8 @@ require(['config'],function(){
             idx++;
             show();
         });
+
+
         //右侧栏动画效果
         require(['rightSide_module']);
         // 分类hover效果
