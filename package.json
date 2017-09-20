@@ -8,11 +8,14 @@
   },
   "dependencies": {
     "browser-sync": "^2.18.13",
-    "gulp-rename": "^1.2.2",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
-    "gulp": "^3.9.1"
+    "http": "0.0.0",
+    "mysql": "^2.14.1",
+    "socket.io": "^2.0.3"
   },
   "devDependencies": {},
   "scripts": {

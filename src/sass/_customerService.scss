@@ -1,0 +1,56 @@
+#customerService{
+    z-index:10000000;height:507px;width:415px;border:1px solid rgb(95, 100, 103);position:absolute;bottom:0;right:0;border-radius: 5px 5px 0px 0px;background:$w;display:none;
+    .touxiang{
+        z-index:0;height:42px;background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(70, 151, 239)), to(rgb(103, 185, 244))) rgb(235, 233, 233);
+        img{position:absolute;border:1px solid rgb(95, 100, 103);top:-13px;left:20px;}
+        span{font-weight:900;color:$w;font-size: 12px;margin-left:80px;font-family: Arial, "Microsoft YaHei";line-height:40px;}
+        i{background:url('../img/index/chaticon.png');    width:20px;height:20px;margin: 13px 5px 0px 0px;display:block;cursor: pointer;float:right;z-index:1;}
+        .i1{background-position:-60px 0;}
+        .i2{background-position:-20px 0;}
+        .i3{background-position:-1px 0;}
+
+    }
+    .jiaoliu{
+        position:relative;height:300px;overflow:hidden;width:415px;overflow-y:auto;
+        img{margin-left:72px;margin-top:30px;}
+        .message{
+            min-height:200px;font-size:12px;color:#000;padding:0 20px;
+            span{color: #b9b9c1;}
+            li{
+                margin-bottom:20px;clear:both;
+            }
+            .active{float:right;}
+            .leftm{float:left;}
+        } 
+        //滚动条css样式
+        &::-webkit-scrollbar{
+            width: 6px;background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar-thumb{border-radius: 10px;background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));
+
+        }
+        &::-webkit-scrollbar-track{background-color: #ebebeb;border-radius:10px;
+        }
+    }
+   
+    
+    .fasong{
+        .icons{height:28px;border-top: 1px solid #d5d5d5;background: #f9f9f9;}
+        .icons i,.icons input{
+            background-image:url('../img/index/chaticon.png');margin:3px 0px 3px 10px;    height:22px;width:20px;display: block;cursor:pointer;float:left;overflow: hidden;
+        }
+        .ic1{background-position:-100px 1px;}
+        .ic2{background-position:-120px 0px;}
+        .ic3{background-position:-180px 0px;}
+        .ic4{background-position:-100px 1px;}
+        .ic5{background-position:-160px 0px;}
+        textarea{width:393px;border:0px solid rgb(0, 136, 255);box-shadow:rgb(170, 170, 170) 0px 0px 5px inset;font-size: 12px;height:73px;    background-color:transparent;padding: 10px;margin:1px;resize:none;}
+        
+    }
+    .end{float:right;margin-right:10px;
+        span{font-size:12px;}
+        input{
+            font-size: 12px;line-height: 26px;height: 26px;    text-align: center;padding: 0px 25px;border: 1px solid rgb(204, 204, 204);background-color: rgb(241, 241, 241);    color: rgb(0, 0, 0);    cursor: pointer; }
+    }
+
+}

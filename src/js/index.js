@@ -1,6 +1,6 @@
 require(['config'],function(){
-    require(['jquery'],function($){
-        // console.log('chenggong');
+    require(['jquery','socketio'],function($,io){
+        // console.log(io);
         ;(function($){
         //侧边栏加载登录页面
         $('.loginlist').load('html/login.html .loginlist .tog,.climg,form');
@@ -72,8 +72,29 @@ require(['config'],function(){
         
 
         require(['rightSideLogin_module']);
+        require(['kf_module']);
+        // //客服弹窗
+        // $('.kf').on('click',function(){
+        //     $('#customerService').css('display','block');
+        //     window.open("../html/kfhoutai.html");   
+        // })
+        // //先和后端建立连接
+        // var socket = io("http://localhost:1233");
+        // // console.log(io);
+        // //初始化的时间戳
+        // var now = new Date();
+        // $('.timestamp').html(now.toString().slice(16,24));
+        // // console.log();
+        // //发送功能
+        // $('#send').on('click',function(){
+        //     var userli = $('.usertx').val();
+        //     var $li = $('<li/>');
+        //     console.log(userli);
+        //     $li.html(`<p>${userli}</p><span>${new Date().toString().slice(16,24)}</span>`).appendTo($('.message')).addClass('active');
+        //     $('.usertx').val('');
+        //     socket.emit('chat',{user:userli});
+        // })
 
-        
         
         
 
