@@ -41,7 +41,7 @@ http.createServer(function(req,res){
 		//获取url的路径名
 		var pathname = url.parse(req.url).pathname;
 
-		//获取ports  前端在ajax里传入的数据  是一个对象
+		//获取ports  前端在ajax(data 参数) 里传入的数据  是一个对象
 		var ports = querystring.parse(post);console.log(ports)
 
 		//设置请求头
@@ -54,7 +54,7 @@ http.createServer(function(req,res){
 			case '/select':
 				connection.query('select * from goods',function(error,results,fields){
 					if(error) throw error;
-					console.log(error)
+					
 					//向前端发送请求到的数据，并且转成JSON字符串
 					res.end(JSON.stringify({
 						status:1,
@@ -66,12 +66,12 @@ http.createServer(function(req,res){
 			//插入（增）
 			case '/insert':
 
-				connection.query(`insert into goods (username,description) values ('${ports.username}','${ports.description}')`,function(error,results,fields){
+				connection.query(`insert into goods (name,qty,price,our_price) values ('${ports.name}','${ports.qty}','${ports.price}','${ports.our_price}')`,function(error,results,fields){
 					if(error) throw error;
 
 					//向前端发送请求到的数据，并且转成JSON字符串
 					res.end(JSON.stringify({
-						status:1,
+						status:'增加成功',
 						results
 					}))
 				});
@@ -79,7 +79,7 @@ http.createServer(function(req,res){
 
 			//删除单个
 			case '/delete':
-				connection.query(`DELETE FROM goods where id=${ports.userid}`,function(error,results,fields){
+				connection.query(`DELETE FROM goods where id=${ports.goodsId}`,function(error,results,fields){
 					if (error) throw error;
 
 					res.end(JSON.stringify({
@@ -89,9 +89,9 @@ http.createServer(function(req,res){
 				});
 				break;
 
-			//查询
+			//查询 input框关键字
 			case '/search':
-				connection.query(`SELECT * from goods WHERE CONCAT(username,description) like '${ports.searchtext}%'`,function(error,results,fields){
+				connection.query(`SELECT * from goods WHERE CONCAT(name,qty,price,our_price) like '${ports.searchtext}%'`,function(error,results,fields){
 					if (error) throw error;
 
 					res.end(JSON.stringify({
@@ -101,25 +101,26 @@ http.createServer(function(req,res){
 				});
 				break;
 
-			//查询当前id的信息（准备修改）
+			//查询当前id的信息（查询当前id对应的商品 把内容填充到input里）
 			case '/haveid':
-				connection.query(`select * FROM goods where id=${ports.userid}`,function(error,results,fields){
+				connection.query(`select * FROM goods where id=${ports.goodsId}`,function(error,results,fields){
 					if (error) throw error;
 
 					res.end(JSON.stringify({
 						status:1,
 						results
 					}))
+
 				});
 				break;
 
 			//改  username = 字符串
 			case '/update':
-				connection.query(`UPDATE goods SET username="${ports.username}",description="${ports.description}" WHERE id=${ports.userid}`,function(error,results,fields){
+				connection.query(`UPDATE goods SET name="${ports.name}",qty="${ports.qty}",price="${ports.price}",our_price="${ports.our_price}" WHERE id=${ports.goodsId}`,function(error,results,fields){
 					if (error) throw error;
 
 					res.end(JSON.stringify({
-						status:1,
+						status:'修改成功',
 						results
 					}))
 				});
