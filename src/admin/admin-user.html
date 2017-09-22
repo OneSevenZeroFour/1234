@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js">
 <head>
   <meta charset="utf-8">
@@ -14,6 +14,23 @@
   <meta name="apple-mobile-web-app-title" content="Amaze UI" />
   <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
   <link rel="stylesheet" href="assets/css/admin.css">
+  <style type="text/css">
+    .multer_form{
+      margin-left: 175px;
+      margin-bottom: 10px;
+    }
+    .yulan{
+      position: absolute;
+      width: 500px;
+      height: 200px;
+      left: 414px;
+      top:316px;
+    }
+    .yulan img{
+      width: 100px;
+      height: 120px;
+    }
+  </style>
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -96,43 +113,7 @@
 
       <div class="am-g">
         <div class="am-u-sm-12 am-u-md-4 am-u-md-push-8">
-          <div class="am-panel am-panel-default">
-            <div class="am-panel-bd">
-              <div class="am-g">
-                <!-- <div class="am-u-md-4">
-                  <img class="am-img-circle am-img-thumbnail" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/200/h/200/q/80" alt=""/>
-                </div> -->
-                <div class="am-u-md-8">
-                  <form class="am-form">
-                    <div class="am-form-group">
-                      <input type="file" id="user-pic" multiple="multiple">
-                      <p class="am-form-help">请选择要上传的商品图片...</p>
-                      <button type="button" class="am-btn am-btn-primary am-btn-xs">保存</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-
-         <!--  <div class="am-panel am-panel-default">
-            <div class="am-panel-bd">
-              <div class="user-info">
-                <p>等级信息</p>
-                <div class="am-progress am-progress-sm">
-                  <div class="am-progress-bar" style="width: 60%"></div>
-                </div>
-                <p class="user-info-order">当前等级：<strong>LV8</strong> 活跃天数：<strong>587</strong> 距离下一级别：<strong>160</strong></p>
-              </div>
-              <div class="user-info">
-                <p>信用信息</p>
-                <div class="am-progress am-progress-sm">
-                  <div class="am-progress-bar am-progress-bar-success" style="width: 80%"></div>
-                </div>
-                <p class="user-info-order">信用等级：正常当前 信用积分：<strong>80</strong></p>
-              </div>
-            </div>
-          </div> -->
+      
 
         </div>
 
@@ -160,13 +141,6 @@
                 <small>输入商品现价，不可为空</small>
               </div>
             </div>
-            <!-- <form class="am-form">
-              <div class="am-form-group">
-                <input type="file" id="user-pic">
-                <p class="am-form-help">请选择要上传的文件...</p>
-                <button type="button" class="am-btn am-btn-primary am-btn-xs">保存</button>
-              </div>
-            </form> -->
             <div class="am-form-group">
               <label for="good-ourprice" class="am-u-sm-3 am-form-label">原价(元)</label>
               <div class="am-u-sm-9">
@@ -174,46 +148,19 @@
                 <small>输入商品原价，不可为空</small>
               </div>
             </div>
-            <div class="am-form-group">
-              <label for="good-category" class="am-u-sm-3 am-form-label">分类</label>
-              <div class="am-u-sm-9">
-                <input type="text" id="good-category" placeholder="输入商品类型 / Category">
-                <small>输入商品类型，可为空</small>
-              </div>
+            <div class="am-form multer_form" id="uploadForm">
+                <input type="file" id="good-pic" name="logo" multiple="multiple" accept="image/*"/>
+                <p class="am-form-help">请选择要上传的文件...</p>
+                <!-- 上传事件交给确认保存按钮 -->
+                <input type="button" class="am-btn am-btn-primary am-btn-xs" onclick="sub()" value="提交"/>
             </div>
-            <!-- <div class="am-form-group">
-              <label for="user-phone" class="am-u-sm-3 am-form-label">电话 / Telephone</label>
-              <div class="am-u-sm-9">
-                <input type="tel" id="user-phone" placeholder="输入你的电话号码 / Telephone">
-              </div>
-            </div>
-
-            <div class="am-form-group">
-              <label for="user-QQ" class="am-u-sm-3 am-form-label">QQ</label>
-              <div class="am-u-sm-9">
-                <input type="number" pattern="[0-9]*" id="user-QQ" placeholder="输入你的QQ号码">
-              </div>
-            </div>
-
-            <div class="am-form-group">
-              <label for="user-weibo" class="am-u-sm-3 am-form-label">微博 / Twitter</label>
-              <div class="am-u-sm-9">
-                <input type="text" id="user-weibo" placeholder="输入你的微博 / Twitter">
-              </div>
-            </div>
-
-            <div class="am-form-group">
-              <label for="user-intro" class="am-u-sm-3 am-form-label">简介 / Intro</label>
-              <div class="am-u-sm-9">
-                <textarea class="" rows="5" id="user-intro" placeholder="输入个人简介"></textarea>
-                <small>250字以内写出你的一生...</small>
-              </div>
-            </div> -->
-
             <div class="am-form-group">
               <div class="am-u-sm-9 am-u-sm-push-3">
                 <button type="button" class="am-btn am-btn-primary" onclick="send()">保存修改</button>
               </div>
+            </div>
+            <div class="yulan">
+              
             </div>
           </form>
         </div>
@@ -251,6 +198,60 @@
 <script src="assets/js/app.js"></script>
 
 <script>
+       $("#good-pic").change(function(){
+          var file = $('#good-pic').get(0).files;
+          console.log(file)
+          var files = [];
+          var imgStr ="";
+          var type = ['jpeg','png','gif'];
+          for(var i =0;i<file.length;i++){
+            for(var j =0;j<type.length;j++){
+              if(file[i].type.indexOf(type[j])!=-1){
+                 imgStr += `<img src="${window.URL.createObjectURL(file[i])}" alt="图片预览"/>`;
+              }
+            }
+            files.push(file[i].name)
+          }
+           $('.yulan').html(imgStr);
+          console.log(files)//拿到上传图片的名字
+          // console.log(tag)
+          // if (file) {
+          //     var fileSize = 0;
+          //     if (file.size > 1024 * 1024) fileSize = (Math.round(file.size * 100 / (1024 * 1024)) / 100).toString() + 'MB';
+          //     else fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + 'KB';
+      
+          //     console.log(file.name, fileSize, file.type);
+          // }
+      });
+       
+      function sub(){
+        var con =confirm("确认提交吗");
+        if(con==true){
+          var file = $('#good-pic').get(0).files;
+          for(var i =0;i<file.length;i++){
+             if(file[i].type.indexOf('image')!=-1){
+                //创建一个空的FormData对象
+                var newData = new FormData();
+                //将文件列表循环写入到formdata对象中
+                for(var i=0;i<$('#good-pic')[0].files.length;i++){
+                  newData.append("logo",$('#good-pic')[0].files[i]);
+                }
+                $.ajax({
+                  url: 'http://localhost:12346/profile',
+                  type: 'POST',
+                  cache: false,
+                  data: newData,
+                  processData: false,
+                  contentType: false
+                }).done(function(res) {
+                  console.log(res) //返回随机生成的图片名字
+                  alert('提交成功');
+                }).fail(function(res) {});
+              }
+            }
+          }
+      }
+
       var goodsId = location.search.slice(4);
      
       var type;
