@@ -97,14 +97,6 @@ require(['config'],function(){
             
         // });
 
-        $login = $('#login');
-        $login.on('click',function(){
-            console.log(666);
-            /*var val = $.trim($username.val());
-            var pas = $pas.val();
-            if(val === 1234 && pas === 1234){
-                window.location.href = '/html/cms.html';
-            }*/
-        })
+
     });
 })

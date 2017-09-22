@@ -8,12 +8,20 @@
   },
   "dependencies": {
     "browser-sync": "^2.18.13",
+<<<<<<< HEAD
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "mysql": "^2.14.1"
+=======
+    "gulp-rename": "^1.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp": "^3.9.1"
+>>>>>>> 450b8a57051babc3d351a0da37a11afdcc1f8d3c
   },
   "devDependencies": {},
   "scripts": {
