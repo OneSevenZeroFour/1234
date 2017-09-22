@@ -15,43 +15,56 @@ var connection = mysql.createConnection({
     database:'outlets'
 });
 connection.connect();
-
-var uselist = {}
-var all = [];
-var mysqlarr = []
+var userlist = [];
 io.on('connection', function(socket){
-    all.push(socket.id);
-    console.log(all[1]);
-    // uselist.push(socket.id);
-    socket.on('chat',function(data){
-        var id = socket.id;
-        // console.log(data);
-        uselist = {
-            id,
-            msg:data
-        };
-        // uselist.msg.push(data);
-        mysqlarr.push(data);
+    socket.on('adduser', function(data) {
+        console.log(socket.id)
+        console.log(data);
+        userlist.push({
+            id: socket.id,
+            name: data.name
+        })
+
+        io.emit("showuserlist", userlist);
         
-        // console.log(124);
-        // console.log(124);
-        socket.emit('connects',id);
-        console.log(uselist);
-        var id2 = all[1];
-        if(all[1] != undefined){
-            io.sockets.sockets[id2].emit("getMessage", data);
+    });
+
+    socket.on('chat',function(data){
+        console.log(data.name);
+        //只存用户的id和message用作分析，如果存在这个socketid则更新message，不存在则插入一条新的数据
+        if(data.message != undefined && data.name == 'user'){
+            connection.query(`select count(*) as count from customer where socketid = '${data.toId}'`,function(error, results, fields){
+                if(error) throw error;
+                var temp = results[0].count*1;
+                console.log(temp);
+
+                if(temp<1){console.log(34);
+                    connection.query(`insert into customer (socketid,message) values ("${data.toId}","${data.message}")`,function(error, results, fields){
+                        if(error) throw error;
+                    });
+                }else{
+                    connection.query(`select * from customer where socketid='${data.toId}'`, function(error, results, fields){
+                        if(error) throw error;
+                        var me = results[0].message + ',' + data.message;
+                        connection.query(`update customer set message='${me}' where socketid='${data.toId}'`,function(error, results, fields){
+                            if(error) throw error;
+                        });
+
+                    });
+                }
+            });
+
+
+        }
+        if(data.toId != undefined){
+            io.sockets.sockets[data.toId].emit("getMessage", data);
         }
     });
-    
 
-
-    // socket.on('another',)
-
-    
-    // console.log(JSON.stringify(uselist));
-    // socket.emit('connects',JSON.stringify(uselist));
-
-
+    socket.on('biaoqing',function(data){
+        //新建一个文件夹存表情的图片，数据库里面存表情代码和表情的路径，textarea输入表情的代码后发送一个请求
+        
+    });
 
 });
 
