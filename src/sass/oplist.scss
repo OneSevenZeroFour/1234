@@ -1,0 +1,170 @@
+@import 'var';
+@import 'indexHeaderFooter';
+@import 'rightSide';
+#hotsale{
+    width: 1200px;height: 150px;margin: 0 auto;border: 1px solid #e6e6e6;overflow: hidden;
+    .commend{
+        float:left;width: 40px;height: 150px;background: #fafafa;border-right: 1px solid #e6e6e6;
+        li{
+            text-align: center;font-size: 14px;font-weight: bold;color: #666;
+        }
+    }
+    .libox{
+        li{float:left;margin-left: 15px;width:272px;position:relative;}
+        li a{width:80px;height:30px;display:block;line-height:30px;background:#e6e6e6;text-align:center;color:#656565;color: #333;margin-top:10px;position:absolute;right:46px;bottom:10px;font-size:12px;
+        }
+        a:hover{color:#f34;}
+        p{color: #333;font-size:12px;margin-top:20px;position:absolute;width:126px;right:0;}
+        p:hover{color:#f34;text-decoration:underline;cursor:pointer;}
+        img{margin-top:10px;width:130px;height:130px;border:1px solid #eaeaea;float:left;}
+    }
+     
+}
+#catediv{
+    width: 1200px;margin: 0 auto;margin-bottom:10px;position: relative;    border: 1px solid #e5e5e5;border-bottom:none;margin-top:20px;
+    .table{
+        height: 40px;background: #fafafa;line-height: 40px;padding-left: 10px;border-bottom: 1px solid #eaeaea;
+        a{float:left;color: #fb5053;font-weight: bold;margin-left: 5px;font-size: 12px;}
+        div{float: left;height: 25px;line-height: 25px;border: 1px solid #e6e6e6;margin-top: 8px;padding-left: 10px;padding-right: 22px;position: relative;margin-left: 10px;background: #fff;z-index: 15;
+        }
+        div a{color:#333;font-weight:100;}
+    } 
+    .th{
+        position: relative;height: 35px;border-bottom: 1px solid #e6e6e6;
+        p{
+            float:left;font-size:12px;width: 80px;text-align: right;line-height: 35px;color: #333;background: #fafafa;}
+        ul li{
+            float:left;margin-left: 20px;margin-top: 1px;line-height: 25px;white-space: nowrap;color: #666;
+            a{
+               font-size:12px;color: #666;    line-height: 35px;display:block;
+            }
+            a:hover{color:#fb5053;}
+        }
+    }
+}
+#reSearch{
+    margin:0 auto;height:45px;background:#f6f6f6;margin-top:20px;padding-top:15px;width:1200px;
+    div{width:540px;margin: 0 auto;}
+    p{font-size:14px;font-family:"Microsoft YaHei","simhei";font-weight:500;margin-right: 5px;float:left;line-height:30px;}
+    input{width:380px;height:25px;padding:2px;background:#fff;border: 1px solid #ccc;color:#000;font-size:12px;}
+    button{width: 80px;height:30px;background: #e43b3d;color: #fff;font-weight: bold;cursor: pointer;border: 1px solid #e22728;}
+}
+@import 'leftgood_deop';
+#goodsdiv{
+    .rightgood{
+        .before{
+            p{float:left;margin: 9px 10px 0px 10px;font-size: 12px;font-weight: bold;
+            }
+            .gclick{
+                li{
+                overflow: hidden;float:left;line-height: 25px;margin-top: 6px;
+                i{background-image:url('../img/oplist/sear-lei.png');float:right;display: block;width: 9px;height: 11px;position: absolute;top: 7px;right: 5px;}
+                .click1{background-position:-70px -58px;}
+                a{
+                   width: 55px;height: 25px;display: block;border: 1px solid #ddd;color: #666;background: #fff;text-align: center;font-size:12px;cursor:pointer;
+                   
+                }
+                .shenjiang{width: 80px;height: 25px;display: block;border: 1px solid #fb5053;color: #fff;background: #dc3645;position: relative;text-align: center;
+                    i{
+                        float:right;display:block;width:9px;height: 11px;background: url(../img/oplist/sear-lei.png) no-repeat;position:absolute;top: 7px;right: 5px;
+                    }
+                    .shang{background-position: -70px -58px;}
+                    .xia{background-position: -70px -46px;}
+                }
+
+                a:hover{height: 25px;background: #fb5053;color: #fff;border: 1px solid #fb5053;}
+                }
+            }
+            .gou{
+                li{line-height: 25px;margin-top: 6px;}            
+                a{float:left;height: 14px;line-height: 14px;color: #1e55ab;padding-left: 18px;background:url('../img/oplist/sear-lei.png') no-repeat -70px 1px transparent;margin-top: 6px;margin-left: 10px;font-size:12px;}
+                a:hover{
+                        color: #f34;float:left;padding-left: 18px;line-height: 14px;height: 14px;background:url('../img/oplist/sear-lei.png') no-repeat scroll -70px -13px transparent;margin-top: 6px;margin-left: 10px;
+                }
+            }
+            .page{
+                float:right;margin-right: 10px;
+                li{position:relative;float:left;margin-right: 6px;line-height: 30px;font-size:12px;}
+                .totalGood,.currenpage{font-weight: bold;color: #fb5053;}    
+                .goto1,.goto2{position: relative;cursor:auto;
+                    a{color: #cdcdcd;display: block;width: 70px;height: 25px;text-align: center;border: 1px solid #ddd;background: #fff;line-height: 25px;}
+                    }
+                    .bianse{
+                        .prev{background-position: -14px 0px;}
+                        a{color:#000;cursor:pointer;}
+                        a:hover{color: #fb5053;border: 1px solid #fb5053;}
+                    }
+                   
+                .shenglue{
+                    span{position:absolute;top:-5px;}
+                }
+                .goto2{
+                    margin-left:13px;cursor:pointer;
+                    a{color: #000;}
+                    a:hover{color: #fb5053;border: 1px solid #fb5053;}
+                }
+                .bianse2{cursor:auto;
+                    .next{background-position: -7px 0px;}
+                    a{color:#cdcdcd;}
+                    a:hover{color:#cdcdcd;border:1px solid #ddd;}
+                }
+                i{background:url('../img/oplist/sear-lei.png')  no-repeat;display: block;width: 5px;height: 9px;position: absolute;}
+                .prev{
+                    background-position:0 0;top: 9px;left: 4px;
+                }
+                .next{background-position: -21px 0;top: 9px;right: 6px;
+
+                }
+            }
+        }
+        .insert{
+            ul li{
+                float:left;width: 240px;height: 390px;border: 1px solid #fff;overflow: hidden;margin-left: 2px;margin-top: 20px;border-bottom: 1px dashed #ddd;
+                .imgboxs{display:block;height:220px;width:220px;}
+                .imgbox{
+                    position:relative;height:220px;margin-left:10px;width:220px;
+                   .imgs{position:absolute;top:0;left:0;height:220px;z-index:-1;
+                   }
+                }
+
+            }
+            .ziyin{
+                    background-image:url('../img/cart/men-bg.png');width: 58px;height: 20px;display: block;background-position: -324px -828px;float:left;margin-top: 4px;margin-right: 5px;
+                
+            }
+
+            .name{
+                color:#666;line-height:25px;font-size:12px;display:block;padding:0px 8px;margin-top: 10px;height: 50px;
+            }
+            .prsa{margin: 10px;}
+            .sa{
+               font-size:14px;color:#999;margin-left:5px;float:left;line-height:23px; 
+            }
+            .sa::before{content:"￥";}
+
+            .pr{color: #e43b3b;font-size: 16px;font-weight:bold;float:left;}
+            .pr::before{content:"￥";}
+            .animateimg{margin-left:13px;position:relative;margin-top:10px;
+                
+                
+                    .prev,.next{display:block;position:absolute;
+                        width: 16px;height: 37px;background: url('../img/oplist/sear-lei.png');border: none;
+                }
+                .boxmove{
+                  width:180px;overflow:hidden;margin-left:16px;position:relative;height:35px;
+                    .boximgs{
+                        position:absolute;
+                        img{width:35px;height:35px;float:left;cursor:pointer;border: 1px solid #ddd;margin-left:8px;box-sizing:border-box;}
+                        img:hover{border: 1px solid #f00;}
+                    }
+                    // .imgs{float:left;}
+                }
+                .prev{background-position: 0px -46px;cursor: pointer;}
+                .prevStop{background-position: -34px -46px;left:0px;}
+                .next{background-position: -51px -46px;right:14px;}    
+                .nextStop{background-position: -17px -46px;right:28px;cursor: pointer;}
+            }
+            li:hover{border: 1px solid #ddd;box-shadow: 0px 0px 5px #999;}
+        }
+    }
+}

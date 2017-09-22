@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>cartlist</title>
+    <link rel="stylesheet" type="text/css" href="../css/cartlist.css" />
+</head>
+<body>
+    <div id="header">
+    </div>
+
+    <div id="cartTop" class="clear boxCenter">
+        <a href="/index.html"><img src="../img/index/logo.png" /><img src="../img/cart/cart-ft.jpg"/></a>
+
+        <div class="input">
+                <input type="text" placeholder="耐克"/ class="search">
+                <button ><a href="">搜索</a></button>
+        </div>
+        <a class="a2" href="../html/oplist.html"><img src="../img/cart/banner.jpg" height="80" width="1200" alt="" /></a>
+    </div>
+    
+    <div id="cartMain" class="boxCenter">
+        <div class="hasGoods">
+            <h6>商品清单
+                <div class="loading">
+                    <img src="../img/cart/alg-lodding.gif"/>
+                </div>
+            </h6>
+            <div class="addgoods">
+                <div class="addTop">
+                    <ul>
+                        <li>全选</li>
+                        <li>订单商品</li>
+                        <p>单价</p>
+                        <p>数量</p>
+                        <p>优惠</p>
+                        <p>小计</p>
+                        <p>操作</p>
+                    </ul>
+                </div>
+                <div class="addlist">
+                    <ul class="ullist"></ul>
+                </div>
+                
+            </div>
+            <div class="alls">
+                <div class="price1">
+                    <label>
+                        <input type="checkbox" id="allcheck"/>
+                        <a>全选</a>
+                    </label>
+                    <a class="delAll">删除</a>
+                    <a>移入收藏夹</a>
+                </div>
+                
+                <div class="price2">
+                    <p>
+                        商品总额：<span class="total"> ￥0.00 </span>
+                         - 商品优惠：
+                        <span class="save"> ￥0.00 </span> = 选购金额： <span class="lastTotal"> ￥0.00 </span>
+                    </p>
+                    <p> &nbsp;-满减优惠<span class="savef"> ￥0.00 </span></p>
+                </div>
+                <div class="price3">
+                    <p>总计：<span class="da14"> 0.00 </span>
+                    <p class="g1">商品<span> 0 </span>件</p>
+                    <p class="g2">赠品<span> 0 </span>件</p>
+                    <a href="">海外直邮结算</a>
+                    <a href="">去结算</a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="zero">
+            <h6>购物车</h6>
+            <div class="empty">
+                <img src="../img/cart/car-b.png" height="160" width="160" alt="" />
+                <p>购物车内暂时没有商品，去 <a href="/index.html"> 首页 </a>挑选喜欢的商品</p>
+            </div>
+        </div>
+        <div class="hotGoods">
+            <h6>热卖推荐</h6>
+                <ul class="hotList">
+                    <li>
+                        <img src="../img/oplist/h7.jpg" alt="">
+                        <p>阿迪达斯男鞋 三叶草Tubular doom 小椰子BY3559-3558-3564-3563</p>
+                    </li>
+                    <li>
+                        <img src="../img/oplist/h5.jpg" alt="">
+                        <p>阿迪达斯男鞋 三叶草Tubular doom 小椰子BY3559-3558-3564-3563</p>
+                    </li>
+                    <li>
+                        <img src="../img/oplist/h6.jpg" alt="">
+                        <p>A-Cold-Wall* Bag ACW 帆布 挎包 基础款 单肩包 斜跨 迷你小包</p>
+                    </li>
+                    <li>
+                        <img src="../img/oplist/h8.jpg" alt="">
+                       <p>converse 1970s DSM店铺联盟全黑三星标</p>
+                    </li>
+                    <li>
+                        <img src="../img/oplist/go1.jpg" alt="">
+                        <p>阿迪达斯男鞋 三叶草Tubular doom 小椰子BY3559-3558-3564-3563</p>
+                    </li>
+                    <li>
+                        <img src="../img/oplist/go2.jpg" alt="">
+                        <p>A-Cold-Wall* Bag ACW 帆布 挎包 基础款 单肩包 斜跨 迷你小包</p>
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <div class="cartfoot">
+    </div>
+    <script src="../js/require.js" data-main="../js/cartlist"></script>
+    <!-- <script src=""></script> -->
+</body>
+</html>
