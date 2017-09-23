@@ -262,7 +262,7 @@
 
           $.ajax({
             type: "POST",
-            url: "http://localhost:8888/haveid",
+            url: "http://localhost:12346/haveid",
             data: {
               goodsId:goodsId
             },
@@ -282,30 +282,6 @@
             }
           });
 
-
-        //   //修改信息
-        // function send(){
-        //    console.log(type)
-        //     $.ajax({
-        //       type: "POST",
-        //       url: "http://localhost:8888/"+type,
-        //       data: {
-
-        //         goodsId:goodsId,
-        //         name:$('#good-name').val(),
-        //         qty:$('#good-num').val(),
-        //         price:$('#good-price').val(),
-        //         our_price:$('#good-ourprice').val()
-
-        //       },
-        //       async: true,
-        //       success: function(data) {
-        //         alert('修改成功');
-        //         window.location.href = 'admin-table.html';
-        //       }
-        //     });
-
-        // };
         type = 'update';
       }else{
         type = 'insert';
@@ -315,7 +291,7 @@
         
         $.ajax({
           type: "POST",
-          url: "http://localhost:8888/"+type,
+          url: "http://localhost:12346/"+type,
           data: {
             goodsId:goodsId,
             name:$('#good-name').val(),

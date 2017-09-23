@@ -211,7 +211,7 @@
         //发送删除请求
         $.ajax({
           type:'POST',
-          url:'http://localhost:8888/delete',
+          url:'http://localhost:12346/delete',
           data:{
             goodsId:userid
           },
@@ -228,13 +228,14 @@
 
         $.ajax({
           type:'POST',
-          url:'http://localhost:8888/search',
+          url:'http://localhost:12346/search',
           data:{
             searchtext:$('.am-form-field').val()
           },
           success:function(data){
 
              var list = JSON.parse(data);
+             var totalQty = $('#totalRec').text(list.results.length);
 
              var html = list.results.map(function(item){
 
@@ -251,7 +252,6 @@
                         <div class="am-btn-toolbar">
                           <div class="am-btn-group am-btn-group-xs">
                             <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
                             <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
                           </div>
                         </div>
@@ -285,12 +285,13 @@
 
           type:"POST",
 
-          url:"http://localhost:8888/select",
+          url:"http://localhost:12346/select",
 
           success:function(data){
+            console.log(data)
 
             var list = JSON.parse(data);
-             var totalQty = $('#totalRec').text(list.results.length);
+            var totalQty = $('#totalRec').text(list.results.length);
 
             var html = list.results.map(function(item){
 
@@ -307,7 +308,6 @@
                         <div class="am-btn-toolbar">
                           <div class="am-btn-group am-btn-group-xs">
                             <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
                             <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
                           </div>
                         </div>
