@@ -78,5 +78,16 @@ define(['socketio'],function(io){
          $('.close,.i1').on('click',function(){
             $cs.css({'display':'none'});
          });
+         //表情效果
+         $('.ic1').on('click',function(){
+            $('.bqb').css('display','block');
+            console.log(123);
+         })
+
+         // var imgs = ''
+         // for(var i=1; i<10; i++){
+         //    // $img = $('<img/>');
+         //    imgs + = `<img src="${../img/}">`
+         // }
          
 });

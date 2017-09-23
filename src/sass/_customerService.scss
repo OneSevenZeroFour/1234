@@ -31,7 +31,8 @@
             }
             .active{float:right;background:#fff;border-radius:5px; border:1px solid #4697ef;padding:5px;}
             .leftm{float:left;background:#fff;border-radius:5px; border:1px solid #ccc;padding:5px;}
-        } 
+        }
+
         //滚动条css样式
         &::-webkit-scrollbar{
             width: 6px;background-color: #F5F5F5;
@@ -45,6 +46,7 @@
    
     
     .fasong{
+        position:relative;
         .icons{height:28px;border-top: 1px solid #d5d5d5;background: #f9f9f9;}
         .icons i,.icons input{
             background-image:url('../img/index/chaticon.png');margin:3px 0px 3px 10px;    height:22px;width:20px;display: block;cursor:pointer;float:left;overflow: hidden;
@@ -55,7 +57,11 @@
         .ic4{background-position:-100px 1px;}
         .ic5{background-position:-160px 0px;}
         textarea{width:393px;border:0px solid rgb(0, 136, 255);box-shadow:rgb(170, 170, 170) 0px 0px 5px inset;font-size: 12px;height:73px;    background-color:transparent;padding: 10px;margin:1px;resize:none;}
-        
+        //表情包样式 
+        .bqb{
+            position:absolute;background:rgb(249, 249, 249);height:200px;width:300px;
+            img{width:30px;height:30px;}
+        }
     }
     .end{float:right;margin-right:10px;
         span{
