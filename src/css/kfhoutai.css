@@ -1,0 +1,99 @@
+@charset "UTF-8";
+body, html, ul, div, p, h1, h2, h3, h4, h5, h6, dt, dd, dl, span { margin: 0; padding: 0; }
+
+ul, li { list-style: none; }
+
+a { text-decoration: none; }
+
+.clear::after { content: ''; display: block; overflow: hidden; height: 0; visibility: hidden; clear: both; zoom: 1; }
+
+img { display: block; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+input, button { outline: none; }
+
+.boxCenter { width: 1200px; margin: 0 auto; }
+
+#customerService { z-index: 10000000; height: 507px; width: 415px; border: 1px solid #4697ef; position: absolute; bottom: 0; right: 0; border-radius: 5px 5px 0px 0px; background: #fff; display: none; }
+
+#customerService .touxiang { z-index: 0; height: 42px; background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#4697ef), to(#67b9f4)) #ebe9e9; cursor: move; }
+
+#customerService .touxiang img { position: absolute; border: 1px solid #5f6467; top: -13px; left: 20px; height: 53px; }
+
+#customerService .touxiang select { font-weight: 900; font-size: 12px; margin-left: 80px; font-family: Arial, "Microsoft YaHei"; line-height: 40px; height: 40px; color: #fff; }
+
+#customerService .touxiang select option { color: #ccc; }
+
+#customerService .touxiang i { background: url("../img/index/chaticon.png"); width: 20px; height: 20px; margin: 13px 5px 0px 0px; display: block; cursor: pointer; float: right; z-index: 1; }
+
+#customerService .touxiang .i1 { background-position: -60px 0; }
+
+#customerService .touxiang .i1:hover { background-position: -60px -20px; }
+
+#customerService .touxiang .i2 { background-position: -20px 0; }
+
+#customerService .touxiang .i2:hover { background-position: -20px -20px; }
+
+#customerService .touxiang .i3 { background-position: -1px 0; }
+
+#customerService .touxiang .i3:hover { background-position: -1px -20px; }
+
+#customerService .jiaoliu { position: relative; height: 300px; overflow: hidden; width: 415px; overflow-y: auto; }
+
+#customerService .jiaoliu img { margin-left: 72px; margin-top: 30px; }
+
+#customerService .jiaoliu .message { min-height: 200px; font-size: 12px; color: #000; padding: 0 20px; }
+
+#customerService .jiaoliu .message span { color: #b9b9c1; }
+
+#customerService .jiaoliu .message li { margin-bottom: 20px; clear: both; }
+
+#customerService .jiaoliu .message .active { float: right; background: #fff; border-radius: 5px; border: 1px solid #4697ef; padding: 5px; }
+
+#customerService .jiaoliu .message .leftm { float: left; background: #fff; border-radius: 5px; border: 1px solid #ccc; padding: 5px; }
+
+#customerService .jiaoliu::-webkit-scrollbar { width: 6px; background-color: #F5F5F5; }
+
+#customerService .jiaoliu::-webkit-scrollbar-thumb { border-radius: 10px; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #5caef3), color-stop(0.72, #497dbd), color-stop(0.86, #1c3a94)); }
+
+#customerService .jiaoliu::-webkit-scrollbar-track { background-color: #ebebeb; border-radius: 10px; }
+
+#customerService .fasong { position: relative; }
+
+#customerService .fasong .icons { height: 28px; border-top: 1px solid #d5d5d5; background: #f9f9f9; }
+
+#customerService .fasong .icons i, #customerService .fasong .icons input { background-image: url("../img/index/chaticon.png"); margin: 3px 0px 3px 10px; height: 22px; width: 20px; display: block; cursor: pointer; float: left; overflow: hidden; }
+
+#customerService .fasong .ic1 { background-position: -100px 1px; }
+
+#customerService .fasong .ic2 { background-position: -120px 0px; }
+
+#customerService .fasong .ic3 { background-position: -180px 0px; }
+
+#customerService .fasong .ic4 { background-position: -100px 1px; }
+
+#customerService .fasong .ic5 { background-position: -160px 0px; }
+
+#customerService .fasong textarea { width: 393px; border: 0px solid #0088ff; box-shadow: #aaaaaa 0px 0px 5px inset; font-size: 12px; height: 73px; background-color: transparent; padding: 10px; margin: 1px; resize: none; }
+
+#customerService .fasong .bqb { position: absolute; background: #f9f9f9; height: 200px; width: 300px; }
+
+#customerService .fasong .bqb img { width: 30px; height: 30px; }
+
+#customerService .end { float: right; margin-right: 10px; }
+
+#customerService .end span { font-size: 12px; }
+
+#customerService .end span:hover { color: #4697ef; cursor: pointer; }
+
+#customerService .end input { font-size: 12px; line-height: 26px; height: 26px; text-align: center; padding: 0px 25px; border: 1px solid #cccccc; background-color: #f1f1f1; color: black; cursor: pointer; }
+
+select { /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/ border: none; outline: none; /*很关键：将默认的select选择框样式清除*/ appearance: none; -moz-appearance: none; -webkit-appearance: none; /*在选择框的最右侧中间显示小箭头图片*/ background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent; /*为下拉小箭头留出一点位置，避免被文字覆盖*/ padding-right: 14px; }
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+
+#customerService { display: block; left: 50%; top: 50%; transform: translate(-50%, -50%); }

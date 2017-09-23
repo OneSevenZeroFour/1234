@@ -1,5 +1,5 @@
 require(['config'],function(){
-    require(['jquery','position'],function($){
+    require(['jquery','socketio','position',],function($,io,position){
         // console.log('chenggong');
        // 定位
         // function position(){
@@ -19,6 +19,7 @@ require(['config'],function(){
         //      },{enableHighAccuracy: true});
         // }
         position();
+        // console.log(io);
         ;(function($){
         //侧边栏加载登录页面
         $('.loginlist').load('html/login.html .loginlist .tog,.climg,form');
@@ -87,13 +88,9 @@ require(['config'],function(){
             var idx = $(this).index();
             $ul.eq(idx).css('display','block').siblings('ul').css('display','none');
         });
-        
 
         require(['rightSideLogin_module']);
-
-        
-        
-        
+        require(['kf_module']);       
 
         })(jQuery);
     });
