@@ -160,7 +160,7 @@ app.post("/update", function(req, res){
 });
 
 
-
+//客服socket
 var ioFunc = require("socket.io");
 
 var http = require("http");

@@ -1,7 +1,6 @@
-# Outlets
+#Outlets
 Outlets,sass,javascript,jQuery,gulp
 仿奥莱购
-
 #奥莱购原网站已发现bug
 1.首页轮播图层级
 2.详情页历史记录少于五张图也能滑动
