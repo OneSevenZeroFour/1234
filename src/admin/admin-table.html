@@ -107,14 +107,14 @@
         </div>
         <div class="am-u-sm-12 am-u-md-3">
           <div class="am-form-group">
-            <select data-am-selected="{btnSize: 'sm'}">
-              <option value="option1">所有类别</option>
-<!--               <option value="option2">IT业界</option>
-              <option value="option3">数码产品</option>
-              <option value="option3">笔记本电脑</option>
-              <option value="option3">平板电脑</option>
-              <option value="option3">只能手机</option>
-              <option value="option3">超极本</option> -->
+            <select class="select" data-am-selected="{btnSize: 'sm'}">
+              <option value="option1">请选搜索类型</option>
+              <option value="option3">id</option>
+              <option value="option3">name</option>
+              <option value="option3">qty</option>
+              <option value="option3">price</option>
+              <option value="option3">our_price</option>
+              <option value="option3">imgurl</option>
             </select>
           </div>
         </div>
@@ -140,6 +140,7 @@
                 <th class="table-type">商品库存量</th>
                 <th class="table-author am-hide-sm-only">商品价格（现价）</th>
                 <th class="table-author am-hide-sm-only">商品价格（原价）</th>
+                <th class="table-author am-hide-sm-only">图片路径</th>
                 <th class="table-date am-hide-sm-only">修改日期</th>
                 <th class="table-set">操作</th>
               </tr>
@@ -161,7 +162,6 @@
             <hr />
           </form>
         </div>
-
       </div>
     </div>
 
@@ -226,11 +226,15 @@
       //模糊搜索（查找）
       $('#search').on('click',function(){
 
+        //获取option框 当前选择了的选项
+        var keyOption = $('.am-selected-btn').find('span').text();
+
         $.ajax({
           type:'POST',
           url:'http://localhost:12346/search',
           data:{
-            searchtext:$('.am-form-field').val()
+            searchtext:$('.am-form-field').val(),
+            keyOption:keyOption
           },
           success:function(data){
 
@@ -247,11 +251,13 @@
                       <td class="goodsqty">${item.qty}</td>
                       <td class="am-hide-sm-only">${item.price}</td>
                       <td class="am-hide-sm-only">${item.our_price}</td>
+                      <td class="am-hide-sm-only">${item.imgurl}</td>
                       <td class="am-hide-sm-only">${item.create_time}</td>
                       <td>
                         <div class="am-btn-toolbar">
                           <div class="am-btn-group am-btn-group-xs">
                             <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                            <button class="am-btn am-btn-default am-btn-xs am-text-secondary" id="edit><span class="am-icon-pencil-square-o"></span> 详情</button>
                             <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
                           </div>
                         </div>
@@ -288,7 +294,6 @@
           url:"http://localhost:12346/select",
 
           success:function(data){
-            console.log(data)
 
             var list = JSON.parse(data);
             var totalQty = $('#totalRec').text(list.results.length);
@@ -303,11 +308,13 @@
                       <td class="goodsqty">${item.qty}</td>
                       <td class="am-hide-sm-only">${item.price}</td>
                       <td class="am-hide-sm-only">${item.our_price}</td>
+                      <td class="am-hide-sm-only">${item.imgurl}</td>
                       <td class="am-hide-sm-only">${item.create_time}</td>
                       <td>
                         <div class="am-btn-toolbar">
                           <div class="am-btn-group am-btn-group-xs">
                             <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                            <button class="am-btn am-btn-default am-btn-xs am-text-secondary" id="edit"><span class="am-icon-pencil-square-o"></span> 详情</button>
                             <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
                           </div>
                         </div>

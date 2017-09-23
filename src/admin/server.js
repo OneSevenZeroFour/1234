@@ -109,17 +109,32 @@ app.post("/delete", function(req, res){
 
 //查询 input框关键字
 app.post("/search", function(req, res){
+	console.log(req.body.keyOption)
 
-	connection.query(`SELECT * from goods WHERE CONCAT(name,qty,price,our_price) like '${req.body.searchtext}%'`,function(error,results,fields){
+	if(req.body.keyOption == '请选搜索类型'){
 
-		if(error) throw error;
-		
-		//向前端发送请求到的数据，并且转成JSON字符串
-		res.send(JSON.stringify({
-			status:1,
-			results
-		}))
-	});
+		connection.query(`SELECT * from goods WHERE CONCAT(name,qty,price,our_price) like '${req.body.searchtext}%'`,function(error,results,fields){
+
+			if(error) throw error;
+			
+			//向前端发送请求到的数据，并且转成JSON字符串
+			res.send(JSON.stringify({
+				status:1,
+				results
+			}))
+		});
+	}else{
+		connection.query(`SELECT * FROM goods where ${req.body.keyOption} LIKE '%${req.body.searchtext}%'`,function(error,results,fields){
+
+			if(error) throw error;
+
+			res.send(JSON.stringify({
+				status:1,
+				results
+			}))
+
+		})
+	}
 
 	res.setHeader('Access-Control-Allow-Origin','*');
 });
