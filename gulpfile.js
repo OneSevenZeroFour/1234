@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 gulp.task('compileSass',function(){
     setTimeout(function(){
         return gulp.src('./src/sass/*.scss')
-                .pipe(sass({outputStyle: 'compressed'}).on('error',sass.logError))
+                .pipe(sass({outputStyle: 'compact'}).on('error',sass.logError))
                 .pipe(gulp.dest('./src/css'));
     },500)
 });
@@ -29,11 +29,11 @@ gulp.task('server',function(){
         // server:'./src/',
 
         // 代理服务器
-<<<<<<< HEAD
+// <<<<<<< HEAD
         proxy:'http://localhost:1234',
-=======
-        proxy:'http://localhost:2345',
->>>>>>> 450b8a57051babc3d351a0da37a11afdcc1f8d3c
+// =======
+//         proxy:'http://localhost:2345',
+// >>>>>>> 450b8a57051babc3d351a0da37a11afdcc1f8d3c
 
         // 端口
         port:2008,

@@ -1,9 +1,10 @@
+
 //首页侧边栏
-;define(['jquery','cookie'],function(){
+;define(['jquery','cookie','socketio'],function($,cookie,io){
         $hovd = $('#right-guide .fix .hovd');
         // $fixl = $('#right-guide .fix span');
         // console.log($fixl);
-        // console.log(1212);
+        // console.log(io);
         $hovd.on('mouseenter',function(){
             // console.log($(this));
             $(this).children('span').stop().animate({'width':115});
@@ -44,7 +45,6 @@
         $('.totop').on('click',function(){
             var scrollTop = $(window).scrollTop();
             var second = parseInt(10000/scrollTop)*500;
-            //100
             // 1000更快 2000慢
             // console.log(second,scrollTop);
             $('html,body').stop().animate({'scrollTop':0},second);
@@ -54,6 +54,7 @@
         // if(username != ''){
         //     $loginlist.html('<p class="geren">个人中心</p>');
         // }
+
         
-        // console.log($('.adgfgn').length)
+        
 });
