@@ -29,7 +29,11 @@ gulp.task('server',function(){
         // server:'./src/',
 
         // 代理服务器
+<<<<<<< HEAD
+        proxy:'http://localhost:1234',
+=======
         proxy:'http://localhost:2345',
+>>>>>>> 450b8a57051babc3d351a0da37a11afdcc1f8d3c
 
         // 端口
         port:2008,

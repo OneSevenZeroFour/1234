@@ -1,9 +1,12 @@
 require(['config'],function(){
+
     require(['jquery','cookie','position'],function($){
+
         ;(function($){
        $('#op-header').load('../index.html #header');
        $('#op-footer').load('../index.html #footer');
         $('#op-right-guide').load('../index.html #right-guide');
+
         position();
         require(['headerHover_module'],function(){
             $('.search').on('blur',function(){

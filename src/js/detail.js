@@ -1,14 +1,18 @@
 require(['config'],function(){
+
     require(['jquery','cookie','position'],function($){
+
         ;(function($){
            $('#de-header').load('../index.html #header');
            $('#de-footer').load('../index.html #footer');
            $('#de-right-guide').load('../index.html #right-guide');
            $('#goodsdiv .de-leftgood').load('../html/oplist.html .leftgood');
+
            position();
            require(['headerHover_module']);
            var id = Cookie.get('goodsid');
            // console.log(id);
+
            //获取元素
            
            $gdbox = $('#detail .gdimg');
@@ -291,8 +295,18 @@ require(['config'],function(){
               }
             // console.log($(this));
           });
+          $.ajax({
+            type:'POST',
+            url:"http://localhost:4321/html",
+            data:'id='+id,
+            success:function(data){
+                var list = JSON.parse(data);
+                //console.log(list[0].html);
+                $('#introduce').html(list[0].html);
+            }
+          })
           //引入右边菜单模块
-            require(['rightSide_module']);
+          require(['rightSide_module']);
             
         })(jQuery);
     });

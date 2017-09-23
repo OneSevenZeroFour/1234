@@ -1,5 +1,7 @@
 require(['config'],function(){
+
     require(['jquery','cookie','position'],function($){
+
         ;(function($){
       // console.log(123);
         $('#header').load('../index.html #header .headerTop');
